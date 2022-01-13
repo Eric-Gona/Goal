@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Quotes</h1>
+    <hr>
+  
+  
+    <div class="row">
+      <div class="col-md-8">
+        <div *ngFor='let goal of goals;let i = index'>
+          <div>
+            <h6 id={{i}} appStrikethrough>{{goal.name}} {{goal.completeDate|date|lowercase}}</h6>
+            <button (click)='toggleDetails(i)' class="btn btn-primary">Show More</button>
+          </div>
+          <pre></pre>
+  
+          <div *ngIf='goal.showDescription'>
+            <app-goal-detail  [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-goal-detail>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
+   </div>
+    </div>
+    <p *ngIf='goals.length > 20'>You have too many goals</p>
+  </div>
