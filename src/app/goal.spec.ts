@@ -1,7 +1,7 @@
 import { Goal } from './goal';
 
-describe('Goal', () => {
+describe('Quote', () => {
   it('should create an instance', () => {
-    expect(new Goal()).toBeTruthy();
+  expect(new Goal()).toBeTruthy();
   });
 });
