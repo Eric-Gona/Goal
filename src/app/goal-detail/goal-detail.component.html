@@ -1,3 +1,10 @@
 <p>{{goal.description}}</p>
 <p>This Quote will be valid in {{goal.completeDate|dateCount}} days</p>
+<div class="icons mt-4 mb-1">
+    <span class="thumb" style="font-size: 1.1em; color: green;" (click)="upVotes(true)">
+      <i class="fa fa-thumbs-up"></i> {{quote.upvotes}}
+    </span>
+    <span class="thumb" style="font-size: 1.1em; color: red;"  (click)= "downVotes(true)">
+      <i class="fa fa-thumbs-down"></i> {{quote.downvotes}}
+    </span>
 <button (click)= 'goalDelete(true)' class="btn btn-outline-danger">Delete Goal</button>
