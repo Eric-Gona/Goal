@@ -9,6 +9,7 @@ import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { FormsModule } from '@angular/forms';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { BestVotedDirective } from './best-voted.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DateCountPipe } from './date-count.pipe';
     GoalDetailComponent,
     DateCountPipe,
     StrikethroughDirective,
+    BestVotedDirective,
 
   ],
   imports: [
