@@ -10,6 +10,13 @@
             <h6 id={{i}} appStrikethrough>{{goal.name}} {{goal.completeDate|date|lowercase}}</h6>
             <button (click)='toggleDetails(i)' class="btn btn-primary">Show More</button>
           </div>
+          <div class="col-md-6">
+            <div *ngFor='let goal of goal;let i = index'>
+                <li appStrikethrough>{{goal.name}} posted on {{goal.completeDate|date|uppercase}}</li> 
+              <div>
+                <h4 id={{i}}>{{goal.name}}</h4>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+              </div> 
           <pre></pre>
   
           <div *ngIf='goal.showDescription'>
