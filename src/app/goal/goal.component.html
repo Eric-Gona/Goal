@@ -22,4 +22,7 @@
    </div>
     </div>
     <p *ngIf='goals.length > 20'>You have too many goals</p>
+    <div *ngIf='quote.showDescription'>
+      <app-goal-details  *ngIf = 'goal.showDescription' [goal]='goal' (isComplete) = 'completeQuote($event,i)' (isUpvotes) = 'upvotesQuote($event,i)' (isDownvotes) = 'downvotesQuote($event,i)'></app-goal-details>
+    </div>
   </div>
